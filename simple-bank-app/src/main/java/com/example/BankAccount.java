@@ -30,6 +30,10 @@ public class BankAccount {
         }
     }
 
+    public boolean verifyPassword(String password) {
+        return this.hashedPassword.equals(hashPassword(password));
+    }
+
     public void deposit(double amount) {
         this.balance += amount;
     }
@@ -49,5 +53,9 @@ public class BankAccount {
 
     public String getAccountNumber() {
         return accountNumber;
+    }
+
+    public String getName() {
+        return name;
     }
 }
